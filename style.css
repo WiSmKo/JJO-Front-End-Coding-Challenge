@@ -1,0 +1,21 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.hero-image {
+  background-image: url("images/hero-image.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 75%;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
