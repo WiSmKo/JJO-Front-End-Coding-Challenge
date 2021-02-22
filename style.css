@@ -1,21 +1,72 @@
 body, html {
-  height: 100%;
   margin: 0;
+  font-family: "Manrope", sans-serif;
 }
 
-.hero-image {
+button {
+  background-color: #266EFD;
+  color: white;
+  border: none;
+  padding: 0.75em 1em;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 4px rgba(38, 110, 253, 0.3);
+}
+button:hover {
+  background-color: #4e87f8;
+  box-shadow: 0 8px 16px 4px rgba(80, 137, 252, 0.63);
+}
+
+header {
+  height: 60vh;
+}
+header .hero-image {
   background-image: url("images/hero-image.png");
-  height: 50%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
-.hero-text {
+header .hero-text {
   position: absolute;
-  top: 75%;
+  top: 35%;
+  left: 7%;
   color: white;
+  line-height: 0.75;
+}
+header .hero-text h1 {
+  font-size: 2.75rem;
+  font-weight: 400;
+}
+header .hero-text button {
+  display: flex;
+  margin-top: 2em;
+}
+header nav {
+  overflow: hidden;
+  padding: 2em;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+header nav ul li:first-child {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-left: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+header nav ul li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0em 1.75em;
 }
 
 /*# sourceMappingURL=style.css.map */
