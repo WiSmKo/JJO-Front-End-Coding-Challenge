@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="hero-image">
+    <header>     
+        <div class = "hero">
             <nav>
                 <ul>
-                    <li><a href="#">JJO</a></li>
+                    <li class="fullwidth"><a href="#">JJO</a></li>
                     <li><a href="#">Discounts</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">FAQ</a></li>
@@ -21,13 +21,14 @@
                     <li><button>Login</button></li>
                 </ul>
             </nav>
-            <div class = "hero-text">
+
+            <div class="hero-text">
                 <h1>Juniors Make IT work.</h1>
-                <span>Hire and invest in highly skilled juniors now.</span>
+                <p>Hire and invest in highly skilled juniors now.</p>
                 <button>Post Offer Now</button>
             </div>
         </div>
-    
+        <img src="images/hero-image.png" alt="laptop">
     </header>
     <main>
         <div class="newJobOffers">
@@ -74,24 +75,25 @@ $ up to PLN 550 net / MD B2B
         <div class="featuredCompanies">
             <h2>Featured Companies</h2>
             <ul>
-                <li><img src="images/icon-briefcase.png">GrandParade</li>
-                <li><img src="images/icon-briefcase.png">Seagrin</li>
-                <li><img src="images/icon-briefcase.png">DEX Ventures</li>
-                <li><img src="images/icon-briefcase.png">NBC</li>
-                <li><img src="images/icon-briefcase.png">SVT SP Zoo</li>
-                <li><img src="images/icon-briefcase.png">DG Tech</li>
-                <li><img src="images/icon-briefcase.png">PickSaaS</li>
-                <li><img src="images/icon-briefcase.png">BlackRose</li>
-                <li><img src="images/icon-briefcase.png">FrontKom</li>
+                <li><a href="a"><img src="images/icon-briefcase.png">GrandParade</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">Seagrin</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">DEX Ventures</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">NBC</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">SVT SP Zoo</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">DG Tech</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">PickSaaS</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">BlackRose</a></li>
+                <li><a href="a"><img src="images/icon-briefcase.png">FrontKom</a></li>
             </ul>
         </div>
         <div class="mailingList">
             <h2>Receive new job offers.</h2>
             <p>Want to know as soon as a new job offer is posted on our website? Subscribe to our weekly job offer digest.</p>
-            <form>
-                <input type="email">
-                <button>Subscribe</button>
+            <form action="/">
+                <input id="email" name="email" type="email" placeholder="Enter email adress" />
+                <button type="submit">Subscribe</button>
             </form>
+            <img src="images/Newsletter-image.png" alt="Checking email in the sunset">
         </div>
     </main>
 </body>

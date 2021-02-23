@@ -12,46 +12,77 @@ button{
     box-shadow: 0 8px 16px 4px rgba(38,110,253, 0.3);
     &:hover{
         background-color: rgb(78, 135, 248);
-        box-shadow: 0 8px 16px 4px rgba(80, 137, 252, 0.63)
+        box-shadow: 0 8px 16px 4px rgba(80, 137, 252, 0.63);
+        cursor: pointer;
     }
 }
 
 header{
+    display: grid;
+    grid-template-areas: "hero";
     height: 60vh;
-    
+    max-height: 600px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.85);
+    @media (min-width: 600px){
+        background-color: rgba(0,0,0,0);
+    }
 
-    .hero-image{
-        background-image: url("images/hero-image.png");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+    >*{
+        grid-area: hero;
+    }
+
+    .hero{
+        z-index: 1;
+        min-width: 30ch;
+        padding: 1rem;
+        margin: 2% 5%;
+        color: white;
+        line-height: 0.75;
+    }
+
+    img{
+        object-fit: cover;
+        height: min(60vh, 600px);
+        width: 100%;
+        z-index: -1;
     }
 
     .hero-text{
-        position: absolute;
-        top: 35%;
-        left: 7%;
-        color: white;
-        line-height: 0.75;
-        h1{
-            font-size: 2.75rem;
-            font-weight: 400;
-        }
-        button{
-            display: flex;
-            margin-top: 2em;
-        }
+        padding-top: 50px;
+    }
+
+    h1{
+        font-size: 2.75rem;
+        font-weight: 400;
     }
 
     nav {
-        overflow: hidden;
-        padding:  2em;
+        grid-area: navigation-links;
         ul{
             margin: 0;
             padding: 0;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 15px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+
+            @media (min-width: 600px){
+                grid-template-columns: 1fr repeat(5, fit-content(100px));
+                grid-gap: 20px;
+                justify-items: end;
+            }
+            .fullwidth{
+                grid-column: 1/7;
+
+                @media (min-width: 600px){
+                    grid-column: 1/2;
+                    justify-self: start;
+                }
+            }
             li{
                 display: inline-block;
                 list-style-type: none;
@@ -66,10 +97,80 @@ header{
                     color: white;
                     display: block;
                     text-decoration: none;
-                    padding: 0em 1.75em;
                 }
             }
         }
+    }
+}
+
+.newJobOffers{
+    padding: 0 1rem;
+    margin: 2% 5%;
+
+    .newJobItems{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 40vh);
+        @media(min-width: 600px){
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 40vh;
+        }
+    }
+
+}
+
+.featuredCompanies{
+    padding: 0 1rem;
+    margin: 2% 5%;
+
+    li{
+        display: grid;
+        grid-template-columns: auto;
+        list-style: none;
+        display: inline-block;
+        
+        img{
+            border: 1.5px solid rgba(77, 77, 77, 0.85);
+            padding: 10%;
+            border-radius: 50%;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}
+
+.mailingList{
+    padding: 0 0 0 1rem;
+    margin: 2% 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    background-color: rgba(20,20,20);
+    color: white;
+    max-height: 325px;
+
+    p{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    h2{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    form{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    img{
+        grid-column: 1/3;
+        grid-row: 1/3;
+        width: 100%;
+    }
+    input{
+        padding: .75em 1em;
+        border-radius: 5px;
     }
 }
 
