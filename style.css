@@ -160,17 +160,60 @@ header nav ul li a {
 
 .featuredCompanies {
   margin: 2% 5%;
+  /* Portfolio Slider */
 }
-.featuredCompanies li {
+.featuredCompanies :root {
+  --gutter: 20px;
+}
+.featuredCompanies .scroller {
+  height: 40vh;
+  padding: var(--gutter) 0;
   display: grid;
-  grid-template-columns: auto;
-  list-style: none;
-  display: inline-block;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
 }
-.featuredCompanies li img {
-  border: 1.5px solid rgba(77, 77, 77, 0.85);
-  padding: 10%;
+.featuredCompanies .scroller > * {
+  grid-column: 2/-2;
+}
+.featuredCompanies .scroller > .full {
+  grid-column: 1/-1;
+}
+.featuredCompanies .horizontalScrollList {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - var(--gutter) * 2);
+  grid-template-rows: minmax(150px, 1fr);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  overflow-y: hidden;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+  padding: 0 20px;
+}
+.featuredCompanies .horizontalScrollList li, .featuredCompanies .horizontalScrollList .horizontalScrollItem {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.featuredCompanies .horizontalScrollList li {
+  text-align: center;
+  padding: 20px;
+}
+.featuredCompanies .horizontalScrollList li img {
+  display: flex;
+  padding: 20px;
+  border: 1px solid rgba(20, 20, 20, 0.6);
   border-radius: 50%;
+}
+.featuredCompanies .horizontalScrollList::before, .featuredCompanies .horizontalScrollList::after {
+  content: "";
+  width: 10px;
 }
 
 .mailingList {
