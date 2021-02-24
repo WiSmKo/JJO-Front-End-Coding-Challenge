@@ -1,15 +1,27 @@
+$blue-highlight: rgb(39 111 251);
+
+@mixin spacing {
+    padding: 1rem;
+    margin: 2% 5%;
+}
+
 body, html{
     margin: 0;
     font-family: 'Manrope', sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: $blue-highlight;
+}
+
 button{
-    background-color: #266EFD;
+    background-color: $blue-highlight;
     color: white;
     border: none;
     padding: .75em 1em;
     border-radius: 5px;
-    box-shadow: 0 8px 16px 4px rgba(38,110,253, 0.3);
+    box-shadow: 0 8px 16px 4px rgba(56, 118, 241, 0.58);
     &:hover{
         background-color: rgb(78, 135, 248);
         box-shadow: 0 8px 16px 4px rgba(80, 137, 252, 0.63);
@@ -35,10 +47,9 @@ header{
     .hero{
         z-index: 1;
         min-width: 30ch;
-        padding: 1rem;
-        margin: 2% 5%;
         color: white;
         line-height: 0.75;
+        @include spacing();
     }
 
     img{
@@ -104,8 +115,7 @@ header{
 }
 
 .newJobOffers{
-    padding: 0 1rem;
-    margin: 2% 5%;
+    @include spacing();
 
     .newJobItems{
         display: grid;
@@ -120,8 +130,7 @@ header{
 }
 
 .featuredCompanies{
-    padding: 0 1rem;
-    margin: 2% 5%;
+    @include spacing();
 
     li{
         display: grid;

@@ -3,13 +3,18 @@ body, html {
   font-family: "Manrope", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #276ffb;
+}
+
 button {
-  background-color: #266EFD;
+  background-color: #276ffb;
   color: white;
   border: none;
   padding: 0.75em 1em;
   border-radius: 5px;
-  box-shadow: 0 8px 16px 4px rgba(38, 110, 253, 0.3);
+  box-shadow: 0 8px 16px 4px rgba(56, 118, 241, 0.58);
 }
 button:hover {
   background-color: #4e87f8;
@@ -36,10 +41,10 @@ header > * {
 header .hero {
   z-index: 1;
   min-width: 30ch;
-  padding: 1rem;
-  margin: 2% 5%;
   color: white;
   line-height: 0.75;
+  padding: 1rem;
+  margin: 2% 5%;
 }
 header img {
   object-fit: cover;
@@ -102,7 +107,7 @@ header nav ul li a {
 }
 
 .newJobOffers {
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 2% 5%;
 }
 .newJobOffers .newJobItems {
@@ -118,7 +123,7 @@ header nav ul li a {
 }
 
 .featuredCompanies {
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 2% 5%;
 }
 .featuredCompanies li {
