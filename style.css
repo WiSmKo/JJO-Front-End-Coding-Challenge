@@ -5,20 +5,20 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #266EFD;
+  color: #056EFD;
 }
 
 button {
-  background-color: #266EFD;
+  background-color: #056EFD;
   color: white;
   border: none;
   padding: 0.75em 1em;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 2px rgba(2, 81, 238, 0.4);
+  box-shadow: 0 4px 8px 2px rgba(2, 88, 205, 0.4);
 }
 button:hover {
-  background-color: #3f7ffd;
-  box-shadow: 0 8px 16px 4px rgba(2, 72, 213, 0.6);
+  background-color: #1e7dfd;
+  box-shadow: 0 8px 16px 4px rgba(1, 77, 180, 0.6);
   cursor: pointer;
 }
 
